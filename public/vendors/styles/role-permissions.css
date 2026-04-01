@@ -1,0 +1,91 @@
+.role-tabs {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.role-tab {
+    padding: 10px 25px;
+    border: 2px solid #e0e0e0;
+    background-color: #fff;
+    color: #333;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.role-tab:hover {
+    background-color: #f5f5f5;
+}
+
+.role-tab.active {
+    background-color: #B80079;
+    color: #fff;
+    border-color: #B80079;
+}
+
+.permissions-container {
+    display: none;
+}
+
+.permissions-container.active {
+    display: block;
+}
+
+.permission-group {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: auto;
+    background-color: #fff;
+}
+
+.permission-dropdown {
+    border: none;
+    border-radius: 0;
+    text-align: left;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 12px 15px;
+    font-weight: 500;
+}
+
+.permission-dropdown:hover {
+    background-color: #e9ecef;
+}
+
+.permission-dropdown:focus {
+    box-shadow: none;
+}
+
+.permission-dropdown i {
+    transition: transform 0.3s ease;
+    font-size: 12px;
+}
+
+.permission-dropdown.active i {
+    transform: rotate(180deg);
+}
+
+.permission-list {
+    padding: 15px;
+    background-color: #fff;
+    max-height: 300px;
+    /* overflow-y: auto; */
+    margin-left: 30px;
+}
+
+.custom-control-label {
+    cursor: pointer;
+    font-size: 13px;
+    padding-top: 2px;
+}
+
+.custom-checkbox {
+    padding-left: 0;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background-color: #B80079;
+    border-color: #B80079;
+}

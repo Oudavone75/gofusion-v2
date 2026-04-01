@@ -1,0 +1,32 @@
+<div class="header">
+	<div class="header-left">
+		<div class="menu-icon dw dw-menu"></div>
+	</div>
+	<div class="header-right">
+		<div class="user-info-dropdown">
+			<div class="dropdown">
+				<a class="dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+					<span class="user-icon">
+						<img  class="profile-image" src="{{ asset(auth('admin')->user()->image_path ?? 'vendors/images/admin/emptyuser.jpg') }}"  alt="">
+					</span>
+					<span class="user-name">{{ auth('admin')->user()->name }}</span>
+				</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+					<a class="dropdown-item" href="{{ route('admin.profile.index') }}">
+						<i class="dw dw-user1"></i> Profile
+					</a>
+					<a class="dropdown-item" href="{{ route('admin.change.index') }}">
+						<i class="icon-copy dw dw-password"></i> Change Password
+					</a>
+					<div class="dropdown-divider"></div>
+					<form action="{{ route('admin.logout') }}" method="POST">
+						@csrf
+						<button type="submit" class="dropdown-item">
+							<i class="dw dw-logout"></i> Log Out
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
