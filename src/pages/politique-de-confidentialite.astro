@@ -1,0 +1,31 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const content = fs.readFileSync(
+  path.resolve('./src/content/legal/politique-confidentialite.html'),
+  'utf-8'
+);
+const tocRaw: { id: string; label: string }[] = JSON.parse(
+  fs.readFileSync(
+    path.resolve('./src/content/legal/politique-confidentialite.toc.json'),
+    'utf-8'
+  )
+);
+// Keep main sections only (skip "Mise à jour" subtitle)
+const toc = tocRaw.filter((t) => !/^mise-a-jour/i.test(t.id));
+---
+
+<LegalLayout
+  title="Politique de confidentialité | Go Fusion"
+  description="Politique de confidentialité Go Fusion. Données collectées, finalités, bases légales RGPD, cookies, destinataires, durée de conservation, vos droits et contact."
+  canonical="/politique-de-confidentialite"
+  lastUpdated="30 juillet 2025"
+  downloadUrl="/legal/politique-confidentialite.pdf"
+  breadcrumbName="Politique de confidentialité"
+  tagLabel="RGPD · Données personnelles"
+  toc={toc}
+>
+  <Fragment set:html={content} />
+</LegalLayout>

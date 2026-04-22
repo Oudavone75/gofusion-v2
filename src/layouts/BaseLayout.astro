@@ -1,0 +1,93 @@
+---
+import SEO from '../components/SEO.astro';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    tags?: string[];
+  };
+  locale?: 'fr_FR' | 'en_US';
+  alternateLocale?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  bodyClass?: string;
+}
+
+const {
+  title,
+  description,
+  canonical,
+  ogImage,
+  ogType,
+  article,
+  locale = 'fr_FR',
+  alternateLocale,
+  noindex,
+  jsonLd,
+  bodyClass = '',
+} = Astro.props;
+
+const htmlLang = locale === 'fr_FR' ? 'fr-FR' : 'en-US';
+---
+
+<!doctype html>
+<html lang={htmlLang}>
+  <head>
+    <SEO
+      title={title}
+      description={description}
+      canonical={canonical}
+      ogImage={ogImage}
+      ogType={ogType}
+      article={article}
+      locale={locale}
+      alternateLocale={alternateLocale}
+      noindex={noindex}
+      jsonLd={jsonLd}
+    />
+
+    <!-- Fonts (Fraunces display + DM Sans body) -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,400&family=Fraunces:opsz,wght@9..144,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Legacy inline design tokens reused by embedded HTML (kept for 1:1 homepage) -->
+    <slot name="head" />
+  </head>
+  <body class={bodyClass}>
+    <slot />
+
+    <!-- Shared scroll-reveal observer -->
+    <script is:inline>
+      (() => {
+        if (typeof window === 'undefined') return;
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('visible');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
+        );
+        const run = () => document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', run);
+        } else {
+          run();
+        }
+      })();
+    </script>
+  </body>
+</html>

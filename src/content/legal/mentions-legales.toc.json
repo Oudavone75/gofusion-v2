@@ -1,0 +1,17 @@
+[
+  {
+    "id": "identite-de-lediteur",
+    "label": "IDENTITÉ DE L’ÉDITEUR",
+    "num": "1"
+  },
+  {
+    "id": "nous-contacter",
+    "label": "NOUS CONTACTER",
+    "num": "2"
+  },
+  {
+    "id": "hebergement",
+    "label": "HÉBERGEMENT",
+    "num": "3"
+  }
+]

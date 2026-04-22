@@ -1,0 +1,27 @@
+---
+import LegalLayout from '../layouts/LegalLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const content = fs.readFileSync(
+  path.resolve('./src/content/legal/mentions-legales.html'),
+  'utf-8'
+);
+const tocRaw: { id: string; label: string }[] = JSON.parse(
+  fs.readFileSync(path.resolve('./src/content/legal/mentions-legales.toc.json'), 'utf-8')
+);
+const toc = tocRaw.filter((t) => !/^mise-a-jour/i.test(t.id));
+---
+
+<LegalLayout
+  title="Mentions légales | Go Fusion"
+  description="Mentions légales de Go Fusion (Oudavone SAS). Identité de l'éditeur, directeur de la publication, hébergement et informations légales."
+  canonical="/mentions-legales"
+  lastUpdated="30 juillet 2025"
+  downloadUrl="/legal/mentions-legales.pdf"
+  breadcrumbName="Mentions légales"
+  tagLabel="Informations légales"
+  toc={toc}
+>
+  <Fragment set:html={content} />
+</LegalLayout>

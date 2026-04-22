@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-sans text-ink bg-dark antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Subtle grain overlay (from legacy design) */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.022;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer components {
+  .container-brand {
+    @apply max-w-[1200px] mx-auto px-7;
+  }
+
+  .gradient-text {
+    background: linear-gradient(90deg, #00b4a6 0%, #7b5ea7 50%, #e91e8c 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-brand text-white font-semibold text-[15px] shadow-brand transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-brand-lg;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-transparent text-white/70 font-medium text-[15px] border border-white/15 transition-all duration-200 ease-out hover:border-magenta hover:text-magenta-light;
+  }
+
+  .section-title {
+    @apply font-display font-extrabold leading-[1.12] tracking-[-0.02em] text-[clamp(32px,4vw,48px)];
+  }
+
+  .hero-title {
+    @apply font-display font-extrabold leading-[1.08] tracking-[-0.02em] text-[clamp(38px,4.5vw,60px)];
+  }
+
+  .section-tag {
+    @apply inline-flex items-center gap-2 text-xs font-semibold tracking-[1.5px] uppercase;
+  }
+
+  .card-dark {
+    @apply bg-dark-card border border-dark-border rounded-brand transition-all duration-300;
+  }
+
+  .card-light {
+    @apply bg-light-card border border-light-border rounded-brand shadow-card transition-all duration-300;
+  }
+}

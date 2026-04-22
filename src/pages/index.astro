@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import HomeBody from '../components/HomeBody.astro';
+import { SITE } from '../consts';
+
+const title = 'Go Fusion | SaaS gamifié d’engagement & formation collaborative';
+const description =
+  "Engagez vos collaborateurs autour de vos priorités stratégiques (IA, cybersécurité, climat, innovation, QVT). 3 minutes par jour suffisent. L'IA transforme votre stratégie en parcours gamifiés. Déploiement en 1 semaine.";
+
+const softwareAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Go Fusion',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, iOS, Android',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '42',
+  },
+  featureList: [
+    'Contenu généré par IA',
+    'Application mobile iOS et Android',
+    'Dashboard temps réel',
+    'Gamification des apprentissages',
+    'Conforme IA Act',
+    'Déploiement en 1 semaine',
+  ],
+  provider: { '@id': `${SITE.url}/#organization` },
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/"
+  jsonLd={[softwareAppSchema, breadcrumb]}
+>
+  <link slot="head" rel="stylesheet" href="/home.css" />
+  <HomeBody />
+</BaseLayout>

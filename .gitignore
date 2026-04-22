@@ -1,0 +1,41 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# environment variables
+.env
+.env.production
+.env.local
+.env.*.local
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+# astro
+.astro/
+
+# vscode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# vercel
+.vercel
+
+# legacy backup
+_legacy/
+
+# secrets / MCP config with keys
+.mcp.json

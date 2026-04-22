@@ -1,0 +1,62 @@
+[
+  {
+    "id": "article-1-presentation",
+    "label": "PRÉSENTATION",
+    "num": "Art. 1"
+  },
+  {
+    "id": "article-2-les-donnees-traitees",
+    "label": "LES DONNÉES TRAITÉES",
+    "num": "Art. 2"
+  },
+  {
+    "id": "article-3-les-finalites-et-bases-legales-des-traitements-de-donnees",
+    "label": "LES FINALITÉS ET BASES LÉGALES DES TRAITEMENTS DE DONNÉES",
+    "num": "Art. 3"
+  },
+  {
+    "id": "article-4-cookies",
+    "label": "COOKIES",
+    "num": "Art. 4"
+  },
+  {
+    "id": "article-5-les-destinataires-des-donnees",
+    "label": "LES DESTINATAIRES DES DONNÉES",
+    "num": "Art. 5"
+  },
+  {
+    "id": "article-6-conservation-de-vos-donnees",
+    "label": "CONSERVATION DE VOS DONNÉES",
+    "num": "Art. 6"
+  },
+  {
+    "id": "article-7-protection-de-vos-donnees",
+    "label": "PROTECTION DE VOS DONNÉES",
+    "num": "Art. 7"
+  },
+  {
+    "id": "article-8-quels-sont-vos-droits",
+    "label": "QUELS SONT VOS DROITS ?",
+    "num": "Art. 8"
+  },
+  {
+    "id": "article-9-liens-renvoyant-vers-des-sites-tiers",
+    "label": "LIENS RENVOYANT VERS DES SITES TIERS",
+    "num": "Art. 9"
+  },
+  {
+    "id": "article-10-conditions-generales-dutilisation",
+    "label": "CONDITIONS GÉNÉRALES D’UTILISATION",
+    "num": "Art. 10"
+  },
+  {
+    "id": "article-11-mise-a-jour-de-la-politique-de-confidentialite",
+    "label": "MISE À JOUR DE LA POLITIQUE DE CONFIDENTIALITÉ",
+    "num": "Art. 11"
+  },
+  {
+    "id": "article-12-comment-communiquer-avec-oudavone",
+    "label": "COMMENT COMMUNIQUER AVEC OUDAVONE ?",
+    "num": "Art. 12"
+  }
+]

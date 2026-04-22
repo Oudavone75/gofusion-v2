@@ -1,0 +1,79 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "trailingSlash": false,
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/solutions",
+      "destination": "/#solution",
+      "statusCode": 301
+    },
+    {
+      "source": "/a-propos",
+      "destination": "/#a-propos",
+      "statusCode": 301
+    },
+    {
+      "source": "/faq",
+      "destination": "/#faq",
+      "statusCode": 301
+    },
+    {
+      "source": "/contact",
+      "destination": "/#contact",
+      "statusCode": 301
+    },
+    {
+      "source": "/accueil-v2",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/conditions-generales-dutilisation",
+      "destination": "/cgu",
+      "statusCode": 301
+    },
+    {
+      "source": "/mentions-legales-et-politique-de-confidentialite",
+      "destination": "/mentions-legales",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        }
+      ]
+    },
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/legal/(.*\\.(docx|pdf))",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" },
+        { "key": "Content-Disposition", "value": "attachment" }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    }
+  ]
+}

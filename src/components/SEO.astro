@@ -1,0 +1,164 @@
+---
+import { SITE } from '../consts';
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+  ogType?: 'website' | 'article';
+  article?: {
+    publishedTime?: string;
+    modifiedTime?: string;
+    author?: string;
+    tags?: string[];
+  };
+  locale?: 'fr_FR' | 'en_US';
+  alternateLocale?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  ogImage = SITE.ogImage,
+  ogType = 'website',
+  article,
+  locale = 'fr_FR',
+  alternateLocale = 'en_US',
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const fullTitle = title.includes('Go Fusion') ? title : `${title} | Go Fusion`;
+const absoluteCanonical = canonical.startsWith('http') ? canonical : `${SITE.url}${canonical}`;
+const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImage}`;
+
+const jsonLdArray = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+
+// Default Organization schema appears on every page
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${SITE.url}/#organization`,
+  name: SITE.name,
+  legalName: SITE.legalName,
+  url: SITE.url,
+  logo: `${SITE.url}/assets/logo/gofusion-logo.png`,
+  image: `${SITE.url}${SITE.ogImage}`,
+  description:
+    'Plateforme SaaS gamifiée d’engagement et de formation collaborative. Go Fusion transforme la stratégie de votre entreprise en parcours gamifiés de 3 minutes par jour, grâce à l’IA.',
+  foundingDate: SITE.founded,
+  numberOfEmployees: { '@type': 'QuantitativeValue', minValue: 1, maxValue: 10 },
+  founder: {
+    '@type': 'Person',
+    name: SITE.founder.name,
+    sameAs: [SITE.founder.linkedin],
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: SITE.address.street,
+    postalCode: SITE.address.zip,
+    addressLocality: SITE.address.city,
+    addressCountry: SITE.address.country,
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'customer support',
+    email: SITE.contact.email,
+    areaServed: ['FR', 'BE', 'LU', 'CH', 'DE', 'IT', 'ES', 'NL'],
+    availableLanguage: ['French', 'English'],
+  },
+  sameAs: [SITE.social.linkedin],
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${SITE.url}/#website`,
+  url: SITE.url,
+  name: SITE.name,
+  description:
+    'SaaS gamifié d’engagement & formation collaborative pour ETI de 500 à 4 000 collaborateurs.',
+  publisher: { '@id': `${SITE.url}/#organization` },
+  inLanguage: ['fr-FR', 'en-US'],
+};
+---
+
+<!-- Primary meta -->
+<title>{fullTitle}</title>
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8" />
+<meta name="theme-color" content="#00B4A6" />
+<meta name="color-scheme" content="dark light" />
+<link rel="canonical" href={absoluteCanonical} />
+
+{noindex && <meta name="robots" content="noindex, nofollow" />}
+{!noindex && <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />}
+
+<!-- Google Search Console -->
+<meta name="google-site-verification" content={SITE.googleSiteVerification} />
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="fr-FR" href={absoluteCanonical} />
+<link
+  rel="alternate"
+  hreflang="en-US"
+  href={absoluteCanonical.replace(SITE.url, `${SITE.url}/en`)}
+/>
+<link rel="alternate" hreflang="x-default" href={absoluteCanonical} />
+
+<!-- Open Graph -->
+<meta property="og:type" content={ogType} />
+<meta property="og:site_name" content={SITE.name} />
+<meta property="og:title" content={fullTitle} />
+<meta property="og:description" content={description} />
+<meta property="og:url" content={absoluteCanonical} />
+<meta property="og:image" content={absoluteOgImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content={`${SITE.name} — ${title}`} />
+<meta property="og:locale" content={locale} />
+<meta property="og:locale:alternate" content={alternateLocale} />
+
+{
+  article && (
+    <>
+      {article.publishedTime && <meta property="article:published_time" content={article.publishedTime} />}
+      {article.modifiedTime && <meta property="article:modified_time" content={article.modifiedTime} />}
+      {article.author && <meta property="article:author" content={article.author} />}
+      {article.tags &&
+        article.tags.map((tag) => <meta property="article:tag" content={tag} />)}
+    </>
+  )
+}
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={fullTitle} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={absoluteOgImage} />
+<meta name="twitter:image:alt" content={`${SITE.name} — ${title}`} />
+
+<!-- Favicons & icons -->
+<link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+<link rel="icon" href="/assets/logo/favicon-40.png" type="image/png" sizes="40x40" />
+<link rel="icon" href="/assets/logo/favicon-160.png" type="image/png" sizes="160x160" />
+<link rel="apple-touch-icon" href="/assets/logo/apple-touch-icon.png" />
+<link rel="mask-icon" href="/assets/logo/gofusion-icon.svg" color="#00B4A6" />
+
+<!-- Fonts preconnect -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+<!-- JSON-LD: Organization + WebSite (always) + page-specific -->
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+{
+  jsonLdArray.map((schema) => (
+    <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+  ))
+}
