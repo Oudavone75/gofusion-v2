@@ -63,7 +63,7 @@
       ]
     },
     {
-      "source": "/legal/(.*\\.(docx|pdf))",
+      "source": "/legal/:file*",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=86400, must-revalidate" },
         { "key": "Content-Disposition", "value": "attachment" }
