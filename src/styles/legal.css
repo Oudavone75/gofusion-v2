@@ -221,27 +221,55 @@
 
 .legal-footer-nav {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
-  margin-top: 48px;
-  padding-top: 32px;
+  margin-top: 56px;
+  padding-top: 36px;
   border-top: 1px solid #E4E9EE;
+  align-items: center;
+}
+.legal-footer-nav::before {
+  content: 'Autres documents :';
+  display: block;
+  width: 100%;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #6B7D8D;
+  margin-bottom: 6px;
 }
 .legal-footer-nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   padding: 10px 18px;
-  border-radius: 10px;
-  background: #FFF;
-  border: 1px solid #E4E9EE;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(0, 180, 166, 0.06) 0%, rgba(233, 30, 140, 0.06) 100%);
+  border: 1px solid rgba(0, 180, 166, 0.18);
   color: #1C2A36;
   text-decoration: none;
   font-size: 13px;
-  font-weight: 500;
-  transition: all 0.2s;
+  font-weight: 600;
+  transition: all 0.25s ease;
+}
+.legal-footer-nav a::before {
+  content: '→';
+  color: #00B4A6;
+  font-weight: 700;
+  transition: transform 0.25s ease;
 }
 .legal-footer-nav a:hover {
-  border-color: #00B4A6;
-  color: #00B4A6;
-  transform: translateY(-1px);
+  border-color: transparent;
+  color: #FFF;
+  background: linear-gradient(135deg, #00B4A6 0%, #7B5EA7 50%, #E91E8C 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(233, 30, 140, 0.25);
+}
+.legal-footer-nav a:hover::before {
+  color: #FFF;
+  transform: translateX(3px);
 }
 
 @media (max-width: 640px) {
