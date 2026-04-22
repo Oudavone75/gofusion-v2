@@ -1,0 +1,99 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogNav from '../../components/BlogNav.astro';
+import { SITE } from '../../consts';
+import '../../styles/blog.css';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+const title = 'Blog | Go Fusion';
+const description =
+  "Articles sur l'engagement collaborateur, la gamification RSE, la QVT, la culture d'entreprise, l'IA et la formation gamifiée. Publiés 1x/semaine par l'équipe Go Fusion.";
+
+const blogSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: 'Blog Go Fusion',
+  description,
+  url: `${SITE.url}/blog`,
+  publisher: { '@id': `${SITE.url}/#organization` },
+  inLanguage: 'fr-FR',
+  blogPost: posts.slice(0, 10).map((p) => ({
+    '@type': 'BlogPosting',
+    headline: p.data.title,
+    url: `${SITE.url}/articles/${p.id}`,
+    datePublished: p.data.pubDate.toISOString(),
+  })),
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Blog', item: `${SITE.url}/blog` },
+  ],
+};
+
+function formatDate(d: Date) {
+  return d.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+}
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/blog"
+  jsonLd={[blogSchema, breadcrumb]}
+>
+  <BlogNav />
+  <main class="blog-page">
+    <div class="blog-container">
+      <header class="blog-header">
+        <div class="blog-tag">Blog Go Fusion</div>
+        <h1 class="blog-title">
+          Nos articles sur l'engagement <em>et la formation gamifiée</em>
+        </h1>
+        <p class="blog-subtitle">
+          Gamification RSE, rapport Gallup, QVT, IA, soft skills — insights pratiques pour DRH et
+          responsables formation d'ETI.
+        </p>
+      </header>
+
+      <div class="blog-grid">
+        {
+          posts.map((post) => (
+            <a href={`/articles/${post.id}`} class="blog-card">
+              {post.data.cover && (
+                <img
+                  src={post.data.cover}
+                  alt={post.data.title}
+                  class="blog-card-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              )}
+              <div class="blog-card-body">
+                {post.data.tags.length > 0 && (
+                  <div class="blog-card-meta">
+                    {post.data.tags.slice(0, 2).map((tag) => (
+                      <span class="blog-card-tag">{tag}</span>
+                    ))}
+                  </div>
+                )}
+                <h2 class="blog-card-title">{post.data.title}</h2>
+                <p class="blog-card-desc">{post.data.description}</p>
+                <div class="blog-card-footer">
+                  <span>{formatDate(post.data.pubDate)}</span>
+                  <span class="blog-card-cta">Lire →</span>
+                </div>
+              </div>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </main>
+</BaseLayout>
