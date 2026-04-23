@@ -234,17 +234,31 @@
 }
 .article-nav a.logo { display: flex; align-items: center; text-decoration: none; }
 .article-nav a.logo img { height: 44px; width: auto; }
+.article-nav-links {
+  list-style: none; display: flex; gap: 22px; align-items: center; margin: 0; padding: 0;
+}
+.article-nav-links li a {
+  color: rgba(255,255,255,0.55); font-size: 14px; font-weight: 500;
+  text-decoration: none; transition: color 0.2s;
+}
+.article-nav-links li a:hover,
+.article-nav-links li a.active { color: #00B4A6; }
+
 .article-nav-cta {
   padding: 9px 22px; border-radius: 24px;
   background: linear-gradient(135deg, #00B4A6 0%, #7B5EA7 50%, #E91E8C 100%);
   color: #fff; font-weight: 600; font-size: 14px; text-decoration: none;
   box-shadow: 0 4px 16px rgba(233,30,140,0.25);
   transition: transform 0.2s, box-shadow 0.2s;
+  white-space: nowrap;
 }
 .article-nav-cta:hover {
   transform: translateY(-1px); box-shadow: 0 6px 24px rgba(233,30,140,0.35);
 }
 
+@media (max-width: 768px) {
+  .article-nav-links { display: none; }
+}
 @media (max-width: 640px) {
   .blog-page { padding: 100px 0 60px; }
   .blog-grid { grid-template-columns: 1fr; }
