@@ -37,6 +37,11 @@
       "source": "/mentions-legales-et-politique-de-confidentialite",
       "destination": "/mentions-legales",
       "statusCode": 301
+    },
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap-index.xml",
+      "statusCode": 301
     }
   ],
   "headers": [

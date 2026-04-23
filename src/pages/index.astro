@@ -41,13 +41,100 @@ const breadcrumb = {
     { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
   ],
 };
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: "Qu'est-ce que Go Fusion exactement ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Go Fusion est une plateforme de gamification qui transforme n'importe quel sujet — avantages RH, intelligence artificielle, cybersécurité, RSE, soft skills — en parcours de micro-défis interactifs de 3 minutes. Le contenu (quiz, vidéos, podcasts, défis photo) est généré par IA, validé par vos équipes, et déployable en 1 semaine.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'À qui s\'adresse Go Fusion ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Go Fusion s'adresse aux entreprises (RH, communication interne, formation), aux collectivités territoriales (engagement citoyen, plan climat, démocratie participative), aux établissements scolaires (sensibilisation, entrepreneuriat) et aux organisateurs d'événements (salons, séminaires). L'application est gratuite pour les utilisateurs finaux.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Comment fonctionne la création de contenu par IA ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "L'IA analyse votre stratégie, vos documents et vos priorités pour générer automatiquement des quiz, défis vidéo, podcasts et micro-formations. Aucune donnée personnelle n'est transmise à l'IA. Tout le contenu est systématiquement relu et validé par Go Fusion puis par vous avant diffusion. Vos collaborateurs peuvent aussi remonter leurs bonnes pratiques terrain, que l'IA transforme en contenu de formation.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Combien de temps faut-il pour déployer Go Fusion ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "De la décision au lancement, comptez 1 semaine. Go Fusion prend en charge la création de contenu — votre charge de travail est de 1 journée maximum. Vous recevez un kit de mise en marche complet : templates de communication, guide ambassadeur, FAQ et assets visuels à vos couleurs.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Go Fusion est-il disponible sur mobile et web ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Oui, Go Fusion est disponible en application mobile native sur iOS et Android avec un parcours type Duolingo, ainsi qu'en web app accessible depuis n'importe quel navigateur. La plateforme s'intègre directement dans vos outils du quotidien — Microsoft Teams, Slack, intranet — pour une expérience totalement fluide sans changer les habitudes de vos équipes.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quels types de campagnes peut-on lancer ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Go Fusion propose un catalogue de campagnes prêtes à l'emploi sur les sujets clés : intelligence artificielle et IA Act, cybersécurité, climat et RSE, avantages salariés, soft skills et reconnaissance, handicap et inclusion, bien-être et QVT, onboarding. Chaque campagne est 100% personnalisable à votre image et contexte.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Comment mesure-t-on l\'engagement et les résultats ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Go Fusion fournit un dashboard temps réel avec les indicateurs clés : taux de participation, progression des équipes, feedback terrain, et classements. En moyenne, Go Fusion permet d'économiser 20 jours par an et par collaborateur car les formations sont intégrées dans le quotidien. Un rapport de fin de campagne est généré pour présenter l'impact en comité de direction.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Les données des utilisateurs sont-elles protégées ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Oui, Go Fusion est conforme au RGPD. Les données sont hébergées en Europe (AWS UE). Aucune donnée personnelle n'est transmise à des tiers. L'IA utilisée pour générer le contenu ne reçoit aucune information confidentielle — uniquement des sujets en open source. Chaque utilisateur peut demander la suppression de ses données à tout moment.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Quel est le coût de Go Fusion ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "L'application est gratuite pour les utilisateurs finaux (collaborateurs, étudiants, citoyens). Le financement est assuré par les entreprises, collectivités ou établissements qui déploient la solution. Contactez-nous à contact@gofusion.fr pour une offre adaptée.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Peut-on utiliser Go Fusion pour l\'engagement citoyen ?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Absolument. Go Fusion permet aux collectivités de transformer leur Plan Climat en expérience interactive, de lancer des sondages et votes gamifiés, de sensibiliser aux éco-gestes et à la mobilité douce, et de former les agents sur la cybersécurité. Les citoyens n'ont pas besoin de code d'accès pour participer.",
+      },
+    },
+  ],
+};
 ---
 
 <BaseLayout
   title={title}
   description={description}
   canonical="/"
-  jsonLd={[softwareAppSchema, breadcrumb]}
+  jsonLd={[softwareAppSchema, breadcrumb, faqSchema]}
 >
   <link slot="head" rel="stylesheet" href="/home.css" />
   <HomeBody />
