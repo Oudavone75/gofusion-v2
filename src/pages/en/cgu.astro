@@ -1,0 +1,25 @@
+---
+import LegalLayout from '../../layouts/LegalLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const content = fs.readFileSync(path.resolve('./src/content/legal/cgu.en.html'), 'utf-8');
+const tocRaw: { id: string; label: string }[] = JSON.parse(
+  fs.readFileSync(path.resolve('./src/content/legal/cgu.en.toc.json'), 'utf-8')
+);
+const toc = tocRaw.filter((t) => !/^mise-a-jour/i.test(t.id));
+---
+
+<LegalLayout
+  title="Terms of Use | Go Fusion"
+  description="Go Fusion Terms of Use. Definitions, purpose, acceptance, access, intellectual property, personal data and liability."
+  canonical="/en/cgu"
+  lastUpdated="July 30, 2025"
+  downloadUrl="/legal/cgu.pdf"
+  breadcrumbName="Terms"
+  tagLabel="Terms of Use"
+  toc={toc}
+  lang="en"
+>
+  <Fragment set:html={content} />
+</LegalLayout>

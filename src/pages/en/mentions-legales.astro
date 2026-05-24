@@ -1,0 +1,28 @@
+---
+import LegalLayout from '../../layouts/LegalLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const content = fs.readFileSync(
+  path.resolve('./src/content/legal/mentions-legales.en.html'),
+  'utf-8'
+);
+const tocRaw: { id: string; label: string }[] = JSON.parse(
+  fs.readFileSync(path.resolve('./src/content/legal/mentions-legales.en.toc.json'), 'utf-8')
+);
+const toc = tocRaw.filter((t) => !/^mise-a-jour/i.test(t.id));
+---
+
+<LegalLayout
+  title="Legal Notice | Go Fusion"
+  description="Go Fusion legal notice (Oudavone SAS). Publisher identity, publication director, hosting and legal information."
+  canonical="/en/mentions-legales"
+  lastUpdated="July 30, 2025"
+  downloadUrl="/legal/mentions-legales.pdf"
+  breadcrumbName="Legal Notice"
+  tagLabel="Legal Information"
+  toc={toc}
+  lang="en"
+>
+  <Fragment set:html={content} />
+</LegalLayout>

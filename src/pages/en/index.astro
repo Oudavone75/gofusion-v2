@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import HomeBodyEN from '../../components/HomeBodyEN.astro';
+import { SITE } from '../../consts';
+
+const title = 'Go Fusion | The Duolingo of corporate training';
+const description =
+  'Engage your team around your strategic priorities in 3 min/day. AI generates tailored gamified learning paths. Live in 1 week.';
+
+const softwareAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Go Fusion',
+  applicationCategory: 'BusinessApplication',
+  operatingSystem: 'Web, iOS, Android',
+  offers: {
+    '@type': 'Offer',
+    priceCurrency: 'EUR',
+    availability: 'https://schema.org/InStock',
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: '4.8',
+    reviewCount: '42',
+  },
+  featureList: [
+    'AI-generated content',
+    'iOS and Android mobile app',
+    'Real-time dashboard',
+    'Gamified learning',
+    'AI Act compliant',
+    'Live in 1 week',
+  ],
+  provider: { '@id': `${SITE.url}/#organization` },
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/en/` },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/en/"
+  locale="en_US"
+  alternateLocale="fr_FR"
+  jsonLd={[softwareAppSchema, breadcrumb]}
+>
+  <link slot="head" rel="stylesheet" href="/home.css" />
+  <HomeBodyEN />
+</BaseLayout>

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "identite-de-lediteur",
+    "label": "PUBLISHER IDENTITY",
+    "num": "1"
+  },
+  {
+    "id": "nous-contacter",
+    "label": "CONTACT US",
+    "num": "2"
+  },
+  {
+    "id": "hebergement",
+    "label": "HOSTING",
+    "num": "3"
+  }
+]

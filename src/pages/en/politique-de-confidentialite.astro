@@ -1,0 +1,31 @@
+---
+import LegalLayout from '../../layouts/LegalLayout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+const content = fs.readFileSync(
+  path.resolve('./src/content/legal/politique-confidentialite.en.html'),
+  'utf-8'
+);
+const tocRaw: { id: string; label: string }[] = JSON.parse(
+  fs.readFileSync(
+    path.resolve('./src/content/legal/politique-confidentialite.en.toc.json'),
+    'utf-8'
+  )
+);
+const toc = tocRaw.filter((t) => !/^mise-a-jour/i.test(t.id));
+---
+
+<LegalLayout
+  title="Privacy Policy | Go Fusion"
+  description="Go Fusion Privacy Policy. Collected data, purposes, GDPR legal bases, cookies, recipients, retention, your rights and contact."
+  canonical="/en/politique-de-confidentialite"
+  lastUpdated="July 30, 2025"
+  downloadUrl="/legal/politique-confidentialite.pdf"
+  breadcrumbName="Privacy Policy"
+  tagLabel="GDPR · Personal Data"
+  toc={toc}
+  lang="en"
+>
+  <Fragment set:html={content} />
+</LegalLayout>

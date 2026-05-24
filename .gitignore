@@ -39,3 +39,4 @@ _legacy/
 
 # secrets / MCP config with keys
 .mcp.json
+.gstack/
