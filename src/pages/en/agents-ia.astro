@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import AgentsBodyEN from '../../components/AgentsBodyEN.astro';
+import { SITE } from '../../consts';
+
+const title = 'Fusion Agents — AI agents + adoption | Go Fusion';
+const description =
+  'AI agents that do the work, and a platform that trains your team to run them. For companies and public-sector organizations.';
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Fusion Agents',
+  serviceType: 'Business AI agents + team upskilling',
+  description:
+    'Specialized AI agents for business functions (writing, monitoring, summarization, customer/citizen relations, reporting), paired with the Go Fusion platform that trains and engages teams to guarantee adoption.',
+  areaServed: ['FR', 'EU', 'US'],
+  provider: { '@id': `${SITE.url}/#organization` },
+  audience: { '@type': 'Audience', audienceType: 'Companies and public sector' },
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE.url}/en/` },
+    { '@type': 'ListItem', position: 2, name: 'AI Agents', item: `${SITE.url}/en/agents-ia` },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/en/agents-ia"
+  locale="en_US"
+  alternateLocale="fr_FR"
+  jsonLd={[serviceSchema, breadcrumb]}
+>
+  <link slot="head" rel="stylesheet" href="/home.css" />
+  <AgentsBodyEN />
+</BaseLayout>

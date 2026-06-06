@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AgentsBody from '../components/AgentsBody.astro';
+import { SITE } from '../consts';
+
+const title = "Agents Fusion — des agents IA métier + l'adoption | Go Fusion";
+const description =
+  "Des agents IA qui font le travail, et une plateforme qui forme vos équipes à les piloter. Pour les entreprises et les collectivités.";
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Agents Fusion',
+  serviceType: 'Agents IA métier + montée en compétence',
+  description:
+    "Agents IA spécialisés sur les métiers (rédaction, veille, synthèse, relation client/citoyen, reporting), couplés à la plateforme Go Fusion qui forme et engage les équipes pour garantir l'adoption.",
+  areaServed: 'FR',
+  provider: { '@id': `${SITE.url}/#organization` },
+  audience: { '@type': 'Audience', audienceType: 'Entreprises et collectivités' },
+};
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Agents IA', item: `${SITE.url}/agents-ia` },
+  ],
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  canonical="/agents-ia"
+  jsonLd={[serviceSchema, breadcrumb]}
+>
+  <link slot="head" rel="stylesheet" href="/home.css" />
+  <AgentsBody />
+</BaseLayout>
