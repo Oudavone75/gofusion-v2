@@ -5,7 +5,7 @@ export const SITE = {
   siren: '984 177 311',
   vat: 'FR50984177311',
   address: {
-    street: '58 rue Monceau',
+    street: '58 rue de Monceau',
     zip: '75008',
     city: 'Paris',
     country: 'FR',
