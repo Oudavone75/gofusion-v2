@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts';
+
+const title = 'Collectivités — Agents Fusion pour vos services | Fusion';
+const description =
+  "Des agents IA pour les collectivités : Cabinet des Élus, urbanisme, logement social, commande publique, juridique, finances. Souveraineté française, incubé Station F.";
+
+const breadcrumb = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Accueil', item: `${SITE.url}/` },
+    { '@type': 'ListItem', position: 2, name: 'Collectivités', item: `${SITE.url}/collectivites` },
+  ],
+};
+---
+
+<BaseLayout title={title} description={description} canonical="/collectivites" jsonLd={[breadcrumb]}>
+  <link slot="head" rel="stylesheet" href="/home.css" />
+
+  <nav><div class="inner"><a href="/" class="fus-nav-logo"><img src="/assets/logos/logo-fusion.png" alt="Fusion" class="fus-logo-img" width="44" height="44">Fusion</a><ul><li><a href="/#agents">Agents Fusion</a></li><li><a href="/#gofusion">Go Fusion</a></li><li><a href="/#usecases">Use Cases</a></li><li><a href="/collectivites" style="color:var(--teal-bright,#00E5D0)">Collectivités</a></li><li><a href="/#blog">Blog</a></li><li><a href="/en/local-authorities" class="lang-switch" title="English version" aria-label="English version">EN</a></li><li><a href="https://mon.gofusion.fr/connexion" class="nav-cta nav-play" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg> Play</a></li><li><a href="mailto:contact@gofusion.fr" class="nav-cta">Démo</a></li></ul></div></nav>
+
+  <section class="fus-hero" style="padding:120px 0 40px">
+    <div class="fus-hero-content">
+      <div class="fus-eyebrow reveal"><span class="dot"></span> Offre dédiée · Collectivités territoriales</div>
+      <h1 class="reveal reveal-delay-1">Des agents IA <span class="brand-a">pour toute la collectivité.</span></h1>
+      <p class="fus-hero-sub reveal reveal-delay-2">Une offre dédiée aux élus, et des agents métier pour vos services : urbanisme, logement social, commande publique, finances, juridique. <strong style="color:#fff">Chacun exécute, vous validez.</strong> Aucun ne décide à votre place.</p>
+      <div class="fus-trust-row reveal reveal-delay-2">
+        <div class="fus-trust-item"><div class="fus-trust-badge"><img src="/assets/logos/ministere.png" alt="Ministère" style="height:30px"></div><div class="fus-trust-label">Référencé État</div></div>
+        <div class="fus-trust-item"><div class="fus-trust-badge"><img src="/assets/logos/osez-ia.png" alt="Osez l'IA" style="height:28px"></div><div class="fus-trust-label">Programme national</div></div>
+        <div class="fus-trust-item"><div class="fus-trust-badge"><img src="/assets/logos/stationf.png" alt="Station F" style="height:22px"></div><div class="fus-trust-label">Incubé</div></div>
+        <div class="fus-trust-item"><div class="fus-trust-badge"><img src="/assets/logos/qualiopi.png" alt="Qualiopi" style="height:30px"></div><div class="fus-trust-label">Processus certifié</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fus-section-bricks">
+    <div class="container">
+      <div class="fus-section-header">
+        <div class="fus-section-tag"><span class="line"></span> UN AGENT POUR CHAQUE MÉTIER <span class="line"></span></div>
+        <h2 class="fus-section-title">Cabinet des Élus + <em>agents métier.</em></h2>
+        <p class="fus-section-sub">Le Cabinet des Élus (7 fonctions en une offre) et des agents dédiés à chaque service.</p>
+      </div>
+      <div class="fus-bricks-grid" style="grid-template-columns:repeat(3,1fr);gap:18px">
+        <div class="fus-brick" style="padding:28px 26px"><div class="fus-brick-badge" style="background:rgba(233,30,140,.15);color:#F4A5CE;border:1px solid rgba(233,30,140,.3)">Offre dédiée</div><h3 style="font-size:22px">Cabinet des Élus</h3><p style="font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.55">Mémoire institutionnelle, arbitrages, gestion de crise, plume, communication, coordination.</p></div>
+        <div class="fus-brick" style="padding:28px 26px"><div class="fus-brick-badge" style="background:rgba(0,180,166,.15);color:#5EE5D6;border:1px solid rgba(0,180,166,.3)">Juridique</div><h3 style="font-size:22px">Iris</h3><p style="font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.55">Veille réglementaire, sécurisation des délibérations, réponses juridiques et modèles de contrats.</p></div>
+        <div class="fus-brick" style="padding:28px 26px"><div class="fus-brick-badge" style="background:rgba(184,149,106,.15);color:#D4B896;border:1px solid rgba(184,149,106,.3)">Urbanisme</div><h3 style="font-size:22px">Liam</h3><p style="font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.55">Pré-instruction ADS, contrôle PLU, projet de courrier au pétitionnaire, suivi des délais.</p></div>
+        <div class="fus-brick" style="padding:28px 26px"><div class="fus-brick-badge" style="background:rgba(123,95,232,.15);color:#B8A5F4;border:1px solid rgba(123,95,232,.3)">Commande publique</div><h3 style="font-size:22px">Charles</h3><p style="font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.55">Rédaction CCTP, analyse comparative des offres, rapport de présentation, veille des seuils.</p></div>
+        <div class="fus-brick" style="padding:28px 26px"><div class="fus-brick-badge" style="background:rgba(0,180,166,.15);color:#5EE5D6;border:1px solid rgba(0,180,166,.3)">Logement social</div><h3 style="font-size:22px">Amayah</h3><p style="font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.55">Instruction et suivi des demandes, pré-cotation, préparation commission d'attribution.</p></div>
+        <div class="fus-brick" style="padding:28px 26px"><div class="fus-brick-badge" style="background:rgba(184,149,106,.15);color:#D4B896;border:1px solid rgba(184,149,106,.3)">Finances</div><h3 style="font-size:22px">Louis</h3><p style="font-size:13.5px;color:rgba(255,255,255,.65);line-height:1.55">Comptabilité publique, suivi budgétaire, subventions, DOB, notes de synthèse.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="fus-section-cream" style="padding:80px 0">
+    <div class="container" style="text-align:center;max-width:820px">
+      <div class="fus-section-tag"><span class="line"></span> POUR APPROFONDIR <span class="line"></span></div>
+      <h2 class="fus-section-title" style="margin-bottom:20px">Notre offre collectivités a son <em>site dédié.</em></h2>
+      <p class="fus-section-sub" style="margin:0 auto 32px;font-size:18px">Retrouvez le détail des agents, les cas concrets pour élus et services, les tarifs et les intégrations sur <strong>agentsfusion.fr</strong>.</p>
+      <a href="https://agentsfusion.fr" target="_blank" rel="noopener" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;padding:16px 34px;font-size:16px">Découvrir agentsfusion.fr →</a>
+      <p style="margin-top:20px;font-size:13px;color:rgba(10,22,40,.5)">Ouvre dans un nouvel onglet · Site partenaire de la marque Fusion</p>
+    </div>
+  </section>
+</BaseLayout>
