@@ -267,8 +267,12 @@ footer{background:var(--dark);border-top:1px solid var(--dark-border);padding:48
 .fus-usecase-featured::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#00B4A6,#E91E8C)}
 .fus-usecase-featured::after{content:"";position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(233,30,140,.15) 0%,transparent 70%);z-index:0;pointer-events:none}
 .fus-usecase-featured > *{position:relative;z-index:1}
-.fus-usecase-featured h4{color:#fff;position:relative;z-index:2}
-.fus-usecase-featured .fus-uc-icon,.fus-usecase-featured .fus-uc-badge-star{position:relative;z-index:2}
+.fus-usecase-featured h4{color:#fff!important;position:relative;z-index:2;margin-top:0}
+.fus-usecase-featured .fus-uc-icon,.fus-usecase-featured .fus-uc-badge-star{position:relative;z-index:3}
+/* featured card layout : badge en haut, puis titre grand, puis rows */
+.fus-usecase-featured{padding-top:56px}
+.fus-usecase-featured .fus-uc-badge-star{top:22px;left:22px;right:auto}
+.fus-usecase-featured .fus-uc-icon{display:none}
 .fus-usecase-featured .fus-uc-icon{background:rgba(233,30,140,.15)}
 .fus-usecase-featured .fus-uc-icon svg{stroke:#F4A5CE}
 .fus-usecase-featured .fus-uc-row{color:rgba(255,255,255,.7);border-top-color:rgba(255,255,255,.1)}
