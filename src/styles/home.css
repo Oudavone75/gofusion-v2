@@ -195,7 +195,9 @@ footer{background:var(--dark);border-top:1px solid var(--dark-border);padding:48
 .fus-hero-content{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 28px}
 .fus-eyebrow{display:inline-flex;align-items:center;gap:10px;padding:7px 16px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:100px;font-size:11.5px;font-weight:600;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.75);margin-bottom:28px}
 .fus-eyebrow .dot{width:6px;height:6px;background:var(--teal-bright);border-radius:50%;box-shadow:0 0 12px var(--teal-bright)}
-.fus-hero h1{font-family:'Fraunces',serif;font-size:60px;line-height:1.1;font-weight:600;letter-spacing:-1.5px;margin-bottom:22px;color:#fff}
+.fus-hero h1{font-family:'Fraunces',serif;font-size:clamp(32px,4.4vw,52px);line-height:1.12;font-weight:600;letter-spacing:-1.2px;margin-bottom:22px;color:#fff;text-wrap:balance;max-width:1000px;margin-left:auto;margin-right:auto}
+.fus-hero h1 .nowrap{white-space:nowrap}
+.fus-hero-content{max-width:1080px}
 .fus-hero h1 .brand-a{background:linear-gradient(90deg,#00B4A6,#7B5FE8);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
 .fus-hero h1 .brand-g{background:linear-gradient(90deg,#00B4A6,#E91E8C);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:italic}
 .fus-hero-sub{font-size:18px;line-height:1.6;color:rgba(255,255,255,.72);max-width:680px;margin:0 auto 40px}
@@ -212,8 +214,8 @@ footer{background:var(--dark);border-top:1px solid var(--dark-border);padding:48
 /* Marquee */
 .fus-marquee-section{padding:40px 0 30px;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);background:#fff;overflow:hidden}
 .fus-marquee-label{text-align:center;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:rgba(10,22,40,.5);margin-bottom:22px}
-.fus-marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 8%,#000 92%,transparent 100%)}
-.fus-marquee-track{display:flex;gap:80px;align-items:center;animation:fus-scroll 34s linear infinite;width:max-content}
+.fus-marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 4%,#000 96%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 4%,#000 96%,transparent 100%);padding:0 40px}
+.fus-marquee-track{display:flex;gap:100px;align-items:center;animation:fus-scroll 24s linear infinite;width:max-content}
 @keyframes fus-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 .fus-client-logo{height:56px;width:auto;opacity:.85;transition:opacity .3s;flex-shrink:0}
 .fus-client-logo:hover{opacity:1}
@@ -263,8 +265,10 @@ footer{background:var(--dark);border-top:1px solid var(--dark-border);padding:48
 .fus-usecase:hover{transform:translateY(-4px);box-shadow:0 20px 40px rgba(0,0,0,.06);border-color:var(--tan-light,#D4B896)}
 .fus-usecase-featured{background:linear-gradient(180deg,#0A1628 0%,#0F2544 100%);color:#fff;border:0;position:relative;overflow:hidden}
 .fus-usecase-featured::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(135deg,#00B4A6,#E91E8C)}
-.fus-usecase-featured::after{content:"";position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(233,30,140,.15) 0%,transparent 70%)}
-.fus-usecase-featured h4{color:#fff}
+.fus-usecase-featured::after{content:"";position:absolute;top:-40px;right:-40px;width:180px;height:180px;background:radial-gradient(circle,rgba(233,30,140,.15) 0%,transparent 70%);z-index:0;pointer-events:none}
+.fus-usecase-featured > *{position:relative;z-index:1}
+.fus-usecase-featured h4{color:#fff;position:relative;z-index:2}
+.fus-usecase-featured .fus-uc-icon,.fus-usecase-featured .fus-uc-badge-star{position:relative;z-index:2}
 .fus-usecase-featured .fus-uc-icon{background:rgba(233,30,140,.15)}
 .fus-usecase-featured .fus-uc-icon svg{stroke:#F4A5CE}
 .fus-usecase-featured .fus-uc-row{color:rgba(255,255,255,.7);border-top-color:rgba(255,255,255,.1)}
@@ -373,3 +377,10 @@ footer{background:var(--dark);border-top:1px solid var(--dark-border);padding:48
   .fus-podcast-item{flex-wrap:wrap}
   .fus-pod-audio{width:100%}
 }
+
+/* Videos briques + Podcast embed */
+.fus-brick-video{margin-top:22px;border-radius:12px;overflow:hidden;aspect-ratio:16/9;background:#000;border:1px solid rgba(255,255,255,.08)}
+.fus-brick-video iframe{width:100%;height:100%;border:0;display:block}
+.fus-podcast-embed{max-width:820px;margin:0 auto;border-radius:20px;overflow:hidden;aspect-ratio:16/9;background:#000;border:1px solid rgba(255,255,255,.1);box-shadow:0 20px 50px rgba(0,0,0,.4)}
+.fus-podcast-embed iframe{width:100%;height:100%;border:0;display:block}
+.fus-podcast-caption{text-align:center;margin-top:20px;font-size:13.5px;color:rgba(255,255,255,.55);font-style:italic;max-width:640px;margin-left:auto;margin-right:auto}
