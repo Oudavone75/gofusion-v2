@@ -9,11 +9,11 @@ draft: false
 
 ## IA Act et formation en entreprise : ce que vos collaborateurs doivent savoir avant 2026
 
-Le **règlement européen sur l'intelligence artificielle** — l'IA Act — est entré en application en août 2024. Mais ce que beaucoup d'entreprises n'ont pas encore réalisé : il crée des **obligations de formation** directes pour les employeurs.
+Le **règlement européen sur l'intelligence artificielle**, l'IA Act, est entré en application en août 2024. Mais ce que beaucoup d'entreprises n'ont pas encore réalisé : il crée des **obligations de formation** directes pour les employeurs.
 
 Pas juste pour les équipes techniques. Pour tous les collaborateurs qui utilisent ou déploient des systèmes d'IA.
 
-Voici ce que vous devez savoir — et comment vous y préparer concrètement.
+Voici ce que vous devez savoir, et comment vous y préparer concrètement.
 
 ---
 
@@ -45,7 +45,7 @@ Concrètement, cela signifie que votre entreprise doit :
 3. **Documenter les actions de formation** pour démontrer la conformité
 4. **Mettre à jour les formations** à mesure que les outils évoluent
 
-Aucun texte ne fixe encore un nombre d'heures minimum — mais l'obligation de résultat est réelle. En cas de contrôle ou d'incident lié à un système d'IA, l'absence de formation documentée constitue une faute.
+Aucun texte ne fixe encore un nombre d'heures minimum, mais l'obligation de résultat est réelle. En cas de contrôle ou d'incident lié à un système d'IA, l'absence de formation documentée constitue une faute.
 
 ---
 
@@ -67,7 +67,7 @@ L'IA Act ne vise pas uniquement les développeurs ou les data scientists. Il con
 
 Une formation IA Act efficace doit couvrir au minimum :
 
-1. **Comprendre ce qu'est l'IA** (et ce qu'elle n'est pas) — démystifier sans survendre
+1. **Comprendre ce qu'est l'IA** (et ce qu'elle n'est pas), démystifier sans survendre
 2. **Identifier les systèmes à risque** utilisés dans leur travail quotidien
 3. **Reconnaître les biais algorithmiques** et leurs conséquences pratiques
 4. **Connaître les droits des personnes** dont les données alimentent les systèmes IA
@@ -93,7 +93,7 @@ L'IA Act s'applique progressivement :
 
 Go Fusion propose un parcours **"IA Act & Littératie IA"** déployable en 1 semaine sur l'ensemble de vos équipes. Le contenu est généré par IA, validé par des experts juridiques, et adapté au niveau et au métier de chaque collaborateur.
 
-Les collaborateurs découvrent les enjeux en 3 minutes par jour via des quiz et défis interactifs. À la fin du parcours, vous disposez d'un **rapport documenté** démontrant que l'ensemble de vos équipes a été formé — utilisable en cas de contrôle.
+Les collaborateurs découvrent les enjeux en 3 minutes par jour via des quiz et défis interactifs. À la fin du parcours, vous disposez d'un **rapport documenté** démontrant que l'ensemble de vos équipes a été formé, utilisable en cas de contrôle.
 
 Le parcours est conforme aux exigences de l'article 4 et mis à jour à chaque évolution réglementaire.
 

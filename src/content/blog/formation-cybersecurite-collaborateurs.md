@@ -56,12 +56,12 @@ En cas de manquement, les sanctions peuvent atteindre **10 millions d'euros** ou
 
 Les analyses des incidents de sécurité pointent systématiquement les mêmes vulnérabilités humaines :
 
-1. **Le phishing** — 83 % des entreprises en ont subi un en 2024 (Proofpoint)
-2. **Les mots de passe faibles ou réutilisés** — 81 % des violations de données en sont la cause
-3. **Le shadow IT** — utilisation d'outils non validés par la DSI
-4. **Le travail sur réseaux non sécurisés** — Wi-Fi public, VPN non activé
-5. **Les pièces jointes malveillantes** — PDF, documents Office piégés
-6. **L'ingénierie sociale** — manipulation psychologique par téléphone ou email
+1. **Le phishing**, 83 % des entreprises en ont subi un en 2024 (Proofpoint)
+2. **Les mots de passe faibles ou réutilisés**, 81 % des violations de données en sont la cause
+3. **Le shadow IT**, utilisation d'outils non validés par la DSI
+4. **Le travail sur réseaux non sécurisés**, Wi-Fi public, VPN non activé
+5. **Les pièces jointes malveillantes**, PDF, documents Office piégés
+6. **L'ingénierie sociale**, manipulation psychologique par téléphone ou email
 
 Une bonne formation cybersécurité doit traiter chacun de ces vecteurs, de manière pratique et mémorisable.
 

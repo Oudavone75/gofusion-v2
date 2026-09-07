@@ -32,7 +32,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 28px;background
 .accomp-icon svg.lc-svg{width:22px;height:22px;stroke:var(--teal-bright)}
 .btn-primary svg.lc-svg,.btn-secondary svg.lc-svg{width:14px;height:14px;margin-right:6px}
 
-/* AGENTS FUSION — NEW badge in nav */
+/* AGENTS FUSION, NEW badge in nav */
 .nav-new-badge{display:inline-flex;align-items:center;justify-content:center;margin-left:6px;padding:2px 7px;border-radius:10px;background:linear-gradient(90deg,#00B4A6 0%,#B8956A 100%);color:#fff!important;font-size:9px;font-weight:800;letter-spacing:.6px;line-height:1;vertical-align:middle;box-shadow:0 2px 8px rgba(184,149,106,.35)}
 
 /* "NOUVELLE OFFRE" pill in hero */
@@ -46,7 +46,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 28px;background
 .agents-team-row img:hover{transform:translateY(-3px) scale(1.1);z-index:5;border-color:var(--tan)}
 .agents-team-count{margin-left:12px;font-size:12px;color:rgba(255,255,255,.55);font-weight:500}
 
-/* AGENTS FUSION — premium editorial palette (tan/gold + cream + navy) */
+/* AGENTS FUSION, premium editorial palette (tan/gold + cream + navy) */
 :root{--tan:#B8956A;--tan-light:#D4B594;--tan-deep:#9A7B53;--tan-soft:rgba(184,149,106,.12);--cream:#FAF8F5;--cream-2:#F4EFE7;--cream-border:#E8E3DA;--navy-deep:#0A1628;--gradient-tan:linear-gradient(90deg,var(--teal) 0%,var(--tan) 100%);--gradient-tan-h:linear-gradient(135deg,var(--teal) 0%,var(--tan) 100%)}
 
 /* nav: active "Agents IA" item with tan underline */
@@ -112,7 +112,7 @@ section .container h2 em.agents-gradient-text{
 .agents-cta-box{border-color:rgba(184,149,106,.22)!important;background:linear-gradient(135deg,rgba(0,180,166,.1) 0%,rgba(184,149,106,.14) 100%)!important}
 .agents-cta-box::before{background:radial-gradient(circle,rgba(184,149,106,.14) 0%,transparent 70%)!important}
 
-/* CREAM section — premium editorial style */
+/* CREAM section, premium editorial style */
 .section-cream{background:var(--cream);padding:100px 0;color:var(--text)}
 .section-cream .section-title{color:#1A1F2E!important}
 .section-cream .section-subtitle{color:#6B7280!important}
@@ -129,7 +129,7 @@ section .container h2 em.agents-gradient-text{
 .agents-tag-pill:hover{background:var(--tan-soft);border-color:var(--tan);transform:translateY(-1px);box-shadow:0 4px 12px rgba(184,149,106,.15)}
 .agents-tag-highlight{background:var(--gradient-tan)!important;color:#fff!important;border-color:transparent!important;font-weight:600!important;box-shadow:0 4px 14px rgba(184,149,106,.25)!important}
 
-/* hero dashboard mockup — CREAM premium editorial */
+/* hero dashboard mockup, CREAM premium editorial */
 .agents-mockup{background:var(--cream);border:1px solid var(--cream-border);border-radius:20px;padding:24px;box-shadow:0 30px 80px rgba(10,22,40,.4),0 0 0 1px rgba(184,149,106,.08);min-width:360px;max-width:440px}
 .agents-mockup-header{display:flex;align-items:center;gap:10px;padding-bottom:16px;border-bottom:1px solid rgba(26,31,46,.08);margin-bottom:16px;font-size:12px;font-weight:500;color:rgba(26,31,46,.6);letter-spacing:.3px}
 .agents-dot{width:10px;height:10px;border-radius:50%;background:var(--tan);box-shadow:0 0 12px rgba(184,149,106,.6);flex-shrink:0}

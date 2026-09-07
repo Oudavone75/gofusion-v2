@@ -19,7 +19,7 @@ Le problème ? La QVT est souvent traitée comme un avantage périphérique, alo
 
 ## QVT et engagement : quelle est la vraie relation ?
 
-La QVT ne crée pas directement l'engagement — elle en est une **condition nécessaire mais pas suffisante**. Un collaborateur qui dort bien et a un bureau ergonomique n'est pas forcément engagé. Mais un collaborateur stressé, épuisé ou mal informé ne peut pas l'être.
+La QVT ne crée pas directement l'engagement, elle en est une **condition nécessaire mais pas suffisante**. Un collaborateur qui dort bien et a un bureau ergonomique n'est pas forcément engagé. Mais un collaborateur stressé, épuisé ou mal informé ne peut pas l'être.
 
 L'ANACT (Agence Nationale pour l'Amélioration des Conditions de Travail) identifie 6 dimensions de la QVT :
 
@@ -44,7 +44,7 @@ Des formats simples fonctionnent : rituels d'équipe hebdomadaires, plateformes 
 
 ### 2. La formation continue intégrée dans le quotidien
 
-Un collaborateur qui se forme est un collaborateur qui progresse — et qui reste. Mais les formations longues et décontextualisées cassent le rythme de travail.
+Un collaborateur qui se forme est un collaborateur qui progresse, et qui reste. Mais les formations longues et décontextualisées cassent le rythme de travail.
 
 La réponse : **micro-learning**, 3 à 5 minutes par jour, sur les sujets métier de l'entreprise. La formation devient un moment positif plutôt qu'une contrainte.
 

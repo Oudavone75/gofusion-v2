@@ -19,7 +19,7 @@ Le **micro-learning propulsé par l'IA** répond à ces trois contraintes en mê
 
 ## Qu'est-ce que le micro-learning ?
 
-Le micro-learning désigne des séquences d'apprentissage courtes — **3 à 7 minutes maximum** — centrées sur un seul objectif pédagogique. Pas de module de 45 minutes, pas de parcours labyrinthique. Une idée, une compétence, un comportement à ancrer.
+Le micro-learning désigne des séquences d'apprentissage courtes, **3 à 7 minutes maximum**, centrées sur un seul objectif pédagogique. Pas de module de 45 minutes, pas de parcours labyrinthique. Une idée, une compétence, un comportement à ancrer.
 
 Le format peut être un quiz, une vidéo courte, un podcast de trajet, un défi photo ou une carte flash.
 
@@ -35,7 +35,7 @@ Ce qui différencie le micro-learning efficace du micro-learning gadget :
 
 Créer du contenu pédagogique prend du temps. Beaucoup de temps. Un module e-learning traditionnel nécessite en moyenne **100 heures de conception** pour 1 heure de formation délivrée.
 
-L'IA réduit ce ratio à quelques heures — ou quelques minutes.
+L'IA réduit ce ratio à quelques heures, ou quelques minutes.
 
 Concrètement, voici ce que l'IA fait désormais dans le processus de formation :
 
@@ -46,10 +46,10 @@ Concrètement, voici ce que l'IA fait désormais dans le processus de formation 
 L'IA adapte le contenu en temps réel selon le niveau de chaque apprenant : si un collaborateur maîtrise déjà un sujet, il passe directement au niveau suivant. Si il bloque, le système propose une reformulation.
 
 ### Détection des lacunes collectives
-En analysant les résultats de l'ensemble des équipes, l'IA identifie les **zones d'incompréhension communes** — des insights que les responsables formation n'auraient jamais pu extraire manuellement.
+En analysant les résultats de l'ensemble des équipes, l'IA identifie les **zones d'incompréhension communes**, des insights que les responsables formation n'auraient jamais pu extraire manuellement.
 
 ### Création multiformat
-Un même contenu source peut être décliné en quiz interactif, podcast synthétisé, vidéo scénarisée ou défi collaboratif — pour toucher tous les profils d'apprenants.
+Un même contenu source peut être décliné en quiz interactif, podcast synthétisé, vidéo scénarisée ou défi collaboratif, pour toucher tous les profils d'apprenants.
 
 ---
 
@@ -79,7 +79,7 @@ Son rôle : compléter et préparer ces formations, ou assurer le **maintien des
 
 ## Comment Go Fusion intègre le micro-learning IA
 
-Go Fusion analyse vos documents stratégiques et vos priorités pour créer automatiquement des parcours de micro-learning adaptés à chaque profil. L'IA génère le contenu — quiz, podcasts, défis — en quelques heures.
+Go Fusion analyse vos documents stratégiques et vos priorités pour créer automatiquement des parcours de micro-learning adaptés à chaque profil. L'IA génère le contenu, quiz, podcasts, défis, en quelques heures.
 
 Vos équipes RH valident, vos collaborateurs jouent. **Déploiement en 1 semaine, taux d'engagement > 70 %**.
 

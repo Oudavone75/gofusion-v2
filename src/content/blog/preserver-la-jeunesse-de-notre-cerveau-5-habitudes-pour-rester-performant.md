@@ -39,6 +39,6 @@ Lire, apprendre une langue, aller au théâtre ou au cinéma… autant de façon
 
 ### En conclusion
 
-Préserver notre cerveau, c’est adopter une approche globale où **santé, bien-être et engagement collaborateur** s’entremêlent. Chez Go Fusion, nous faisons de ces habitudes des **défis ludiques et mesurables**. Parce que la **longévité** — individuelle, collective et planétaire — commence par prendre soin de soi, un petit pas à la fois.
+Préserver notre cerveau, c’est adopter une approche globale où **santé, bien-être et engagement collaborateur** s’entremêlent. Chez Go Fusion, nous faisons de ces habitudes des **défis ludiques et mesurables**. Parce que la **longévité**, individuelle, collective et planétaire, commence par prendre soin de soi, un petit pas à la fois.
 
 ‍

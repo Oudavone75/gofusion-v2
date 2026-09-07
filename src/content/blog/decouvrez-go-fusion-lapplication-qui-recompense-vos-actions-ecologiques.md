@@ -46,7 +46,7 @@ Une seule solution pour adresser plusieurs sujets stratégiques : IA, cybersécu
 ## **Ce qu’en disent les utilisateurs**
 
  _« Go Fusion nous a permis de diffuser nos priorités stratégiques beaucoup plus vite, tout en valorisant l’intelligence collective de nos équipes. Les collaborateurs ne subissent plus la formation, ils y participent. »_
-— Responsable transformation, ETI
+Responsable transformation, ETI
 
 ## **Conclusion**
 

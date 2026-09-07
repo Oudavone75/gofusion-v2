@@ -11,7 +11,7 @@ draft: false
 
 Les modules e-learning de 45 minutes que personne ne finit. Les formations en présentiel qui vident les agendas pour un retour à l'oubli dès le lendemain. Les quiz obligatoires cochés en 3 minutes chrono. Si ces situations vous parlent, vous n'êtes pas seul·e.
 
-Pourtant, une approche change radicalement la donne : **la gamification de la formation en entreprise**. Pas les badges décoratifs collés sur un LMS vieillissant — mais une vraie mécanique de jeu appliquée à l'apprentissage professionnel.
+Pourtant, une approche change radicalement la donne : **la gamification de la formation en entreprise**. Pas les badges décoratifs collés sur un LMS vieillissant, mais une vraie mécanique de jeu appliquée à l'apprentissage professionnel.
 
 ---
 
@@ -50,7 +50,7 @@ Les nouvelles recrues retiennent 2,5x plus d'informations via des parcours gamif
 
 ### 2. La cybersécurité
 
-C'est l'un des sujets les plus critiques — et les plus redoutés en formation. La gamification permet d'aborder les phishing, mots de passe et bonnes pratiques sous forme de défis interactifs plutôt que de slides.
+C'est l'un des sujets les plus critiques, et les plus redoutés en formation. La gamification permet d'aborder les phishing, mots de passe et bonnes pratiques sous forme de défis interactifs plutôt que de slides.
 
 ### 3. Les avantages salariés et la QVT
 
@@ -62,7 +62,7 @@ Transformer les engagements RSE en défis collectifs (tri, mobilité douce, éco
 
 ### 5. Les soft skills
 
-Intelligence émotionnelle, communication, feedback... ces compétences s'acquièrent par la pratique et la répétition — exactement ce que permettent les parcours gamifiés.
+Intelligence émotionnelle, communication, feedback... ces compétences s'acquièrent par la pratique et la répétition, exactement ce que permettent les parcours gamifiés.
 
 ---
 
@@ -76,7 +76,7 @@ La vraie gamification part du **contenu lui-même** : des questions courtes, un 
 
 ## Comment Go Fusion l'applique
 
-Go Fusion génère automatiquement des parcours gamifiés à partir de **vos documents internes, vos priorités stratégiques et vos sujets métier**. L'IA crée les quiz, défis vidéo et podcasts — vos équipes valident, les collaborateurs jouent.
+Go Fusion génère automatiquement des parcours gamifiés à partir de **vos documents internes, vos priorités stratégiques et vos sujets métier**. L'IA crée les quiz, défis vidéo et podcasts, vos équipes valident, les collaborateurs jouent.
 
 Résultat : une formation déployée en **1 semaine**, avec des taux d'engagement qui dépassent systématiquement 70 %.
 
