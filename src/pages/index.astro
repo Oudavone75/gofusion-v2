@@ -5,7 +5,7 @@ import { SITE } from '../consts';
 
 const title = "Fusion | Agents IA + adoption pour entreprises et collectivités";
 const description =
-  "Agents Fusion crée vos agents IA métier. Go Fusion les fait adopter par vos équipes. Souveraineté française (Mistral via Scaleway), incubé Station F. Pour entreprises et collectivités.";
+  "Agents Fusion crée vos agents IA métier. Go Fusion les fait adopter par vos équipes. Hébergement en France (Mistral via Scaleway, ISO 27001), sous droit français. Incubé Station F. Pour entreprises et collectivités.";
 
 const softwareAppSchema = {
   '@context': 'https://schema.org',
@@ -88,10 +88,18 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: "Comment garantir la souveraineté des données avec l'IA ?",
+      name: "Comment garantir la protection des données ?",
       acceptedAnswer: {
         '@type': 'Answer',
-        text: "Toute notre infrastructure est 100% en France. Les modèles d'IA que nous utilisons sont Mistral, consommés via Scaleway (datacenters français). Aucune donnée ne quitte le territoire national. Conformité RGPD, chiffrement AES-256, purge automatique 12 mois après collecte. Chaque utilisateur peut demander la suppression de ses données à tout moment.",
+        text: "Vos données sont hébergées en France chez Scaleway (ISO 27001, HDS), sous droit français. Les modèles d'IA sont Mistral, éditeur français. Aucun transfert de données hors UE. Conformité RGPD, chiffrement AES-256, purge automatique 12 mois après collecte. Chaque utilisateur peut demander la suppression de ses données à tout moment.",
+      },
+    },
+    {
+      '@type': 'Question',
+      name: "Que veut dire souverain pour Fusion ?",
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: "Nous parlons de souveraineté au sens juridique et opérationnel : vos données restent hébergées en France chez Scaleway (ISO 27001, HDS, SecNumCloud en cours de qualification), opérées sous droit français, avec des modèles Mistral (éditeur français). Aucune donnée ne transite hors UE et nous ne sommes pas soumis au CLOUD Act américain. En revanche, nous ne prétendons pas à une souveraineté matérielle absolue (semi-conducteurs, équipements réseau) : à ce jour, aucun acteur au monde ne peut la revendiquer sur toute la chaîne. Nous préférons vous le dire clairement plutôt que de vendre du rêve.",
       },
     },
     {
@@ -208,7 +216,7 @@ const faqSchema = {
       name: 'Agents Fusion',
       serviceType: "Agents IA métier sur mesure pour entreprises et collectivités",
       description:
-        "Conception et déploiement d'agents IA métier sur mesure : standard téléphonique 24/7, prospection commerciale, rédaction éditoriale, juridique, comptabilité, urbanisme, logement social. Audit process + déploiement en quelques semaines. Souveraineté française (Mistral via Scaleway).",
+        "Conception et déploiement d'agents IA métier sur mesure : standard téléphonique 24/7, prospection commerciale, rédaction éditoriale, juridique, comptabilité, urbanisme, logement social. Audit process + déploiement en quelques semaines. Hébergement en France chez Scaleway (ISO 27001, HDS, SecNumCloud en cours), modèles Mistral, sous droit français.",
       areaServed: ['FR', 'BE', 'LU', 'CH'],
       provider: { '@id': `${SITE.url}/#organization` },
       audience: { '@type': 'Audience', audienceType: 'Entreprises, ETI, PME, grands groupes, collectivités territoriales' },
