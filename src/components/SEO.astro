@@ -33,7 +33,7 @@ const {
 } = Astro.props;
 
 // If the page title already contains "Fusion" (any form: "Fusion", "Go Fusion", "Agents Fusion"),
-// don't append the site name — avoids duplication like "Fusion | ... | Go Fusion".
+// don't append the site name, avoids duplication like "Fusion | ... | Go Fusion".
 const fullTitle = /\bFusion\b/.test(title) ? title : `${title} | Go Fusion`;
 const absoluteCanonical = canonical.startsWith('http') ? canonical : `${SITE.url}${canonical}`;
 const absoluteOgImage = ogImage.startsWith('http') ? ogImage : `${SITE.url}${ogImage}`;
